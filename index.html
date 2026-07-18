@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CompassX™</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<nav>
+
+<div class="logo">
+🧭 CompassX™
+</div>
+
+<ul>
+<li><a href="#">Compass</a></li>
+<li><a href="#">Country Mode</a></li>
+<li><a href="#">Navigation</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+Navigate the World
+</h1>
+
+<p>
+Advanced Smart Compass with Global Direction Tracking
+</p>
+
+</section>
+
+<section class="compass-section">
+
+<div class="compass-container">
+
+<div class="compass">
+
+<div class="ring">
+
+<span class="north">N</span>
+<span class="east">E</span>
+<span class="south">S</span>
+<span class="west">W</span>
+
+</div>
+
+<div id="needle"></div>
+
+<div class="center-dot"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="country-mode">
+
+<h2>Country Mode</h2>
+
+<select id="countrySelect">
+
+<option value="india">India 🇮🇳</option>
+<option value="japan">Japan 🇯🇵</option>
+<option value="usa">USA 🇺🇸</option>
+<option value="uk">United Kingdom 🇬🇧</option>
+<option value="australia">Australia 🇦🇺</option>
+
+</select>
+
+<button id="findCountry">
+Find Direction
+</button>
+
+<div class="country-info">
+
+<h3 id="countryName">
+Select a Country
+</h3>
+
+<p id="bearing">
+Bearing: --
+</p>
+
+<p id="distance">
+Distance: --
+</p>
+
+</div>
+
+</section>
+
+<section class="dashboard">
+
+<div class="card">
+
+<span>Latitude</span>
+
+<h3 id="lat">
+--
+</h3>
+
+</div>
+
+<div class="card">
+
+<span>Longitude</span>
+
+<h3 id="lon">
+--
+</h3>
+
+</div>
+
+<div class="card">
+
+<span>Heading</span>
+
+<h3 id="heading">
+0°
+</h3>
+
+</div>
+
+<div class="card">
+
+<span>Direction</span>
+
+<h3 id="direction">
+N
+</h3>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>
+CompassX™
+</h3>
+
+<p>
+Navigate the World
+</p>
+
+<p>
+© 2026 CompassX Technologies
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
