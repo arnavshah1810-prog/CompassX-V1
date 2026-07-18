@@ -18,6 +18,12 @@ lat: 39.8283,
 lon: -98.5795
 },
 
+germany: {
+name: "Germany 🇩🇪",
+lat:  51.1657,
+lon: 10.4528
+},
+
 uk: {
 name: "United Kingdom 🇬🇧",
 lat: 55.3781,
