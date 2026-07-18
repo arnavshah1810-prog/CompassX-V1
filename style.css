@@ -1,0 +1,299 @@
+:root{
+--bg:#050505;
+--card:#0d1117;
+--gold:#d4af37;
+--text:#ffffff;
+--muted:#9ca3af;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+#stars{
+position:fixed;
+inset:0;
+z-index:-1;
+background:
+radial-gradient(circle at 20% 30%, rgba(255,255,255,.15) 1px, transparent 1px),
+radial-gradient(circle at 70% 60%, rgba(255,255,255,.1) 1px, transparent 1px),
+radial-gradient(circle at 40% 80%, rgba(255,255,255,.12) 1px, transparent 1px);
+background-size:120px 120px;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 8%;
+backdrop-filter:blur(18px);
+background:rgba(0,0,0,.4);
+border-bottom:1px solid rgba(255,255,255,.05);
+z-index:100;
+}
+
+.logo{
+font-size:1.3rem;
+font-weight:700;
+color:var(--gold);
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.hero{
+min-height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:120px;
+}
+
+.hero h1{
+font-size:clamp(3rem,7vw,5rem);
+margin-bottom:15px;
+}
+
+.hero p{
+color:var(--muted);
+font-size:1.1rem;
+}
+
+.compass-section{
+display:flex;
+justify-content:center;
+padding:50px 20px;
+}
+
+.compass-container{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.compass{
+width:420px;
+height:420px;
+border-radius:50%;
+background:linear-gradient(145deg,#111,#050505);
+border:3px solid rgba(212,175,55,.3);
+position:relative;
+box-shadow:
+0 0 50px rgba(212,175,55,.15),
+inset 0 0 40px rgba(255,255,255,.04);
+}
+
+.ring{
+position:absolute;
+inset:0;
+}
+
+.ring span{
+position:absolute;
+font-size:1.8rem;
+font-weight:700;
+color:var(--gold);
+}
+
+.north{
+top:15px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.south{
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.east{
+right:20px;
+top:50%;
+transform:translateY(-50%);
+}
+
+.west{
+left:20px;
+top:50%;
+transform:translateY(-50%);
+}
+
+#needle{
+position:absolute;
+width:8px;
+height:170px;
+background:linear-gradient(
+to top,
+white,
+var(--gold)
+);
+left:50%;
+top:50%;
+transform-origin:bottom center;
+transform:translate(-50%,-100%);
+border-radius:999px;
+box-shadow:0 0 20px var(--gold);
+transition:1s ease;
+}
+
+.center-dot{
+width:22px;
+height:22px;
+background:var(--gold);
+border-radius:50%;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+box-shadow:0 0 20px var(--gold);
+}
+
+.country-mode{
+padding:100px 10%;
+text-align:center;
+}
+
+.country-mode h2{
+font-size:2.5rem;
+margin-bottom:25px;
+}
+
+select{
+width:320px;
+padding:14px;
+background:#111;
+color:white;
+border:1px solid rgba(255,255,255,.1);
+border-radius:12px;
+}
+
+button{
+padding:14px 30px;
+margin-left:10px;
+background:var(--gold);
+border:none;
+border-radius:12px;
+font-weight:700;
+cursor:pointer;
+}
+
+.country-info{
+margin-top:40px;
+}
+
+.country-info h3{
+font-size:2rem;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.country-info p{
+color:var(--muted);
+margin-top:8px;
+}
+
+.dashboard{
+padding:80px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 25px rgba(212,175,55,.15);
+}
+
+.card span{
+color:var(--muted);
+}
+
+.card h3{
+margin-top:12px;
+font-size:2rem;
+color:var(--gold);
+}
+
+footer{
+padding:80px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+footer h3{
+color:var(--gold);
+margin-bottom:12px;
+}
+
+footer p{
+color:var(--muted);
+margin:8px 0;
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.compass{
+width:320px;
+height:320px;
+}
+
+#needle{
+height:120px;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+select{
+width:100%;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+margin-left:0;
+}
+
+}
